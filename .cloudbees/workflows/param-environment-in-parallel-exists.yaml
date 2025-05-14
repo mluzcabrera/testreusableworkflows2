@@ -6,7 +6,7 @@ on:
     inputs:
       targetenv:
         type: string
-        required: true
+        required: false
         default: environment_mlcb_test_param
 jobs:
 

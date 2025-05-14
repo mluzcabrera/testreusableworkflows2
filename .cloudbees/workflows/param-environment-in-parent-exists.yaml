@@ -22,6 +22,7 @@ jobs:
         shell: sh
         run: |
           echo "testvar: ${{ secrets.testsec }}"
+    needs: testparamenv
   testparamenv:
     environment: ${{ inputs.targetenv }}
     steps:
@@ -35,4 +36,3 @@ jobs:
         shell: sh
         run: |
           echo "testvar: ${{ secrets.testsec }}"
-    needs: testhardocedenv

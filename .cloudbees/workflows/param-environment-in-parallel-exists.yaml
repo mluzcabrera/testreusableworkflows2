@@ -12,6 +12,8 @@ jobs:
 
   testcall:
     uses: mluzcabrera/reusableworkflowsrepo/.cloudbees/workflows/reusable.yaml
+    whatever:
+      what: ever
     with:
       targetenv: ${{ inputs.targetenv }}
     

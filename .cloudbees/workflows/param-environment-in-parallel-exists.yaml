@@ -9,22 +9,8 @@ on:
         required: true
         default: environment_mlcb_test_param
 jobs:
-   
-  testparamenv:
-    environment: ${{ inputs.targetenv }}
-    steps:
-      - name: Print testvar
-        uses: docker://golang:1.20.3-alpine3.17
-        shell: sh
-        run: |
-          echo "testvar: ${{ vars.testvar }}"
-      - name: Print testsec
-        uses: docker://golang:1.20.3-alpine3.17
-        shell: sh
-        run: |
-          echo "testvar: ${{ secrets.testsec }}"
 
-  testhardocedenv:
+  testcall:
     environment: environment_mlcb_test_param
     uses: mluzcabrera/reusableworkflowsrepo/.cloudbees/workflows/reusable.yaml
     with:

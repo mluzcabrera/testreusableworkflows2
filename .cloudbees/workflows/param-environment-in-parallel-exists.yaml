@@ -13,6 +13,7 @@ jobs:
   testcall:
     uses: mluzcabrera/reusableworkflowsrepo/.cloudbees/workflows/reusable.yaml
     secrets: inherit
+    vars: inherit
     with:
       targetenv: ${{ inputs.targetenv }}
     

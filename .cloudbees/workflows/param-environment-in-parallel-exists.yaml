@@ -26,7 +26,7 @@ jobs:
 
   testhardocedenv:
     environment: environment_mlcb_test_param
-    uses: mluzcabrera/testreusableworkflows2/.cloudbees/workflows/reusable.yaml
+    uses: mluzcabrera/reusableworkflowsrepo/.cloudbees/workflows/reusable.yaml
     with:
       targetenv: ${{ inputs.targetenv }}
     

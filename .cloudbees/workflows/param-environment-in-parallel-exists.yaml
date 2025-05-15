@@ -5,12 +5,17 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      targetenv:
+        type: string
+        default: ''
 jobs:
   testcall:
     uses: mluzcabrera/reusableworkflowsrepo/.cloudbees/workflows/reusable.yaml
     secrets: inherit
     vars: inherit
-    # with:
-    #   targetenv: ${{ inputs.targetenv }}
+    with:
+      targetenv: ${{ inputs.targetenv }}
     
 

@@ -2,14 +2,10 @@ apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: Param environment in parallel exists
 on:
-  workflow_dispatch:
-    inputs:
-      targetenv:
-        type: string
-        required: false
-        # default: environment_mlcb_test_param
+  push:
+    branches:
+      - main
 jobs:
-
   testcall:
     uses: mluzcabrera/reusableworkflowsrepo/.cloudbees/workflows/reusable.yaml
     secrets: inherit

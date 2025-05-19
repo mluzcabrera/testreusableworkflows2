@@ -10,7 +10,8 @@ on:
 jobs:
   testcall:
     uses: mluzcabrera/reusableworkflowsrepo/.cloudbees/workflows/reusable.yaml
-    secrets: inherit
+    secrets: 
+      testsec: "hardcode"
     vars: inherit
     with:
       targetenv: ${{ inputs.targetenv }}
@@ -27,4 +28,4 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "testsec: ${{ secrets.testsec }}"
+          echo "testsec: ${{ secrets.testsec }} . is this masked?-> hardcode "

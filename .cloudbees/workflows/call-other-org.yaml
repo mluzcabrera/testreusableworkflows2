@@ -4,7 +4,13 @@ name: call other org
 
 on:
   workflow_dispatch:
+    inputs:
+        targetenv: 
+            type: string
+            default: targetenv
 
 jobs:
   call:
     uses: gmaxey/subworkflows/.cloudbees/workflows/mlcbsimplerw.yaml
+    with:
+        targetenv: ${{ inputs.targetenv }}

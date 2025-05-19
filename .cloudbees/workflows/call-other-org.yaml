@@ -12,5 +12,7 @@ on:
 jobs:
   call:
     uses: gmaxey/subworkflows/.cloudbees/workflows/mlcbsimplerw.yaml
+    vars: inherit
+    secrets: inherit
     with:
         targetenv: ${{ inputs.targetenv }}

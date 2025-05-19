@@ -7,8 +7,4 @@ on:
 
 jobs:
   call:
-    uses: gmaxey/subworkflows/.cloudbees/workflows/deploy.yaml
-    vars: inherit
-    with:
-        artifactName: "asdf"
-        artifactVersion: "asdf2"
+    uses: gmaxey/subworkflows/.cloudbees/workflows/mlcbsimplerw.yaml

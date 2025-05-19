@@ -7,7 +7,7 @@ on:
 
 jobs:
   call:
-    uses: https://github.com/gmaxey/subworkflows/blob/main/.cloudbees/workflows/deploy.yaml
+    uses: gmaxey/subworkflows/.cloudbees/workflows/deploy.yaml
     with:
         artifactName: "asdf"
         artifactVersion: "asdf2"

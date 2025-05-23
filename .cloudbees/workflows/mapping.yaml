@@ -3,6 +3,10 @@ kind: workflow
 name: mapping
 on:
   workflow_dispatch:
+    inputs:
+        targetenv:
+            type: string
+            default: "environment_mlcb_test_param"
 jobs:
   print:
     steps:

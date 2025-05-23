@@ -24,7 +24,7 @@ jobs:
   testcall:
     uses: mluzcabrera/reusableworkflowsrepo/.cloudbees/workflows/reusable.yaml
     secrets:
-      testsec: "hardcode"
+      testsec2: "hardcode"
     vars: inherit
     with:
       targetenv: ${{ inputs.targetenv }}

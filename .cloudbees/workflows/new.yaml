@@ -11,7 +11,6 @@ on:
 jobs:
   testcall:
     uses: mluzcabrera/reusableworkflowsrepo/.cloudbees/workflows/reusable2.yaml
-    environment: testparamenv
     secrets: inherit
     vars: inherit
     with:

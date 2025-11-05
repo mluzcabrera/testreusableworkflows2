@@ -1,18 +1,21 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: call other org
-
 on:
   workflow_dispatch:
     inputs:
-        targetenv: 
-            type: string
-            default: targetenv
-
+      targetenv:
+        type: string
+        default: targetenv
 jobs:
   call:
     uses: gmaxey/subworkflows/.cloudbees/workflows/mlcbsimplerw.yaml
     vars: inherit
     secrets: inherit
     with:
-        targetenv: ${{ inputs.targetenv }}
+      targetenv: ${{ inputs.targetenv }}
+  job2:
+    steps:
+      - name: step2
+        uses: cloudbees-io/checkout@v1
+    needs: call
